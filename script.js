@@ -13,4 +13,5 @@ function getComputerChoice() {
     }
 }
 
+// Take the user choice and returns it
 
