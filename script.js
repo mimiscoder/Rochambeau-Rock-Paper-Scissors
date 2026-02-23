@@ -24,3 +24,7 @@ function getHumanChoice() {
     return userChoice;
 }
 
+// Take the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement
+function playRound(humanChoice, computerChoice) {
+  
+}
