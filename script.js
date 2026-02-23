@@ -1,3 +1,7 @@
+// Variables to store user and computer scores
+let humanScore, computerScore;
+humanScore = computerScore = 0;
+
 // Randomly returns “rock”, “paper” or “scissors”.
 function getComputerChoice() {
     // Get the random number(0-2) and store it in a variable
