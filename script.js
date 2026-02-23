@@ -63,6 +63,8 @@ function playGame() {
     for(let i = 0; i < 5; i++) {
         playRound(humanSelection, computerSelection);
     }
+
+    finallWinner()
 }
 
 // Determine the finall winner
@@ -82,3 +84,5 @@ function finallWinner(finallHumanScores, finallComputerScores) {
         )
     }
 }
+
+
