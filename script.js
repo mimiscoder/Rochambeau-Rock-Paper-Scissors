@@ -26,31 +26,55 @@ function getHumanChoice() {
 
 // Take the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement
 function playRound(humanChoice, computerChoice) {
-    alert(computerChoice)
     // Select the winner and assign score to human or computer
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
         humanScore += 1;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        console.log(`You win this round! ${humanChoice} beats ${computerChoice}`);
     }else if(humanChoice === "Paper" && computerChoice === "Rock") {
         humanScore += 1;
-        console.log(`You win! ${humanChoice} beat ${computerChoice}`);
+        console.log(`You win this round! ${humanChoice} beat ${computerChoice}`);
     }else if(humanChoice === "Scissors" && computerChoice === "Paper") {
         humanScore += 1;
-        console.log(`You win! ${humanChoice} beat ${computerChoice}`);
+        console.log(`You win this round! ${humanChoice} beat ${computerChoice}`);
     }else if(humanChoice === "Rock" && computerChoice === "Paper") {
         computerScore += 1;
-        console.log(`You lose! ${computerChoice} beat ${humanChoice}`);
+        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
     }else if(humanChoice === "Paper" && computerChoice === "Scissors") {
         computerScore += 1;
-        console.log(`You lose! ${computerChoice} beat ${humanChoice}`);
+        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
     }else if(humanChoice === "Scissors" && computerChoice === "Rock") {
         computerScore += 1;
-        console.log(`You lose! ${computerChoice} beat ${humanChoice}`);
+        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
     }else if(humanChoice === computerChoice) {
         computerScore += 1;
         humanScore += 1;
-        console.log(`You tie! ${computerChoice} ties ${humanChoice}`);
+        console.log(`You tie this round! ${computerChoice} ties ${humanChoice}`);
     }else {
         console.log("UNKOWN OPERATION!")
+    }
+}
+
+// Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+function playGame() {
+    for(let i = 0; i < 5; i++) {
+        playRound()
+    }
+}
+
+// Determine the finall winner
+function finallWinner(finallHumanScores, finallComputerScores) {
+    // Print the finall winner and scores based on the finall scores of both computer and user
+    if(finallHumanScores > finallComputerScores) {
+        console.log(
+            `Yes! You're the winner. \n
+            Your Final Scores: ${finallHumanScores}\n
+            Computer Final Scores: ${finallComputerScores}`
+        )
+    }else{
+        console.log(
+            `"Unfortunately! You lost!". \n
+            Your Final Scores: ${finallHumanScores}\n
+            Computer Final Scores: ${finallComputerScores}`
+        )
     }
 }
