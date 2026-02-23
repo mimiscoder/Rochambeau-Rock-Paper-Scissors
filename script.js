@@ -1,3 +1,4 @@
+// Randomly returns “rock”, “paper” or “scissors”.
 function getComputerChoice() {
     // Get the random number(0-2) and store it in a variable
     let randomValue = Math.floor(Math.random() * 3);
