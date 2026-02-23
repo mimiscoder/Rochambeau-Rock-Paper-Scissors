@@ -56,8 +56,11 @@ function playRound(humanChoice, computerChoice) {
 
 // Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
 function playGame() {
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
     for(let i = 0; i < 5; i++) {
-        playRound()
+        playRound(humanSelection, computerSelection);
     }
 }
 
