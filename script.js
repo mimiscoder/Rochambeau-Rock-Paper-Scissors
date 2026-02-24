@@ -24,7 +24,7 @@ function getHumanChoice() {
     return userChoice;
 }
 
-// Take the human and computer player choices as arguments, plays a single round, increments the round winner’s score and logs a winner announcement
+// Select the winner or loser and assign the score accordingly in a single round.
 function playRound(humanChoice, computerChoice) {
     // Select the winner and assign score to human or computer
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
@@ -48,22 +48,10 @@ function playRound(humanChoice, computerChoice) {
     }else if(humanChoice === computerChoice) {
         computerScore += 1;
         humanScore += 1;
-        console.log(`You tie this round! ${computerChoice} ties ${humanChoice}`);
+        console.log(`It's a tie this round! ${computerChoice} ties with ${humanChoice}`);
     }else {
         console.log("UNKOWN OPERATION!")
     }
-}
-
-// Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
-function playGame() {
-    for(let i = 0; i < 5; i++) {
-        let humanSelection = getHumanChoice();
-        humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase()
-        const computerSelection = getComputerChoice();
-        playRound(humanSelection, computerSelection);
-    }
-
-    finallWinner(humanScore, computerScore)
 }
 
 // Determine the finall winner
@@ -82,6 +70,18 @@ function finallWinner(finallHumanScores, finallComputerScores) {
             Computer Final Scores: ${finallComputerScores}`
         )
     }
+}
+
+// Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+function playGame() {
+    for(let i = 0; i < 5; i++) {
+        let humanSelection = getHumanChoice();
+        humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase()
+        const computerSelection = getComputerChoice();
+        playRound(humanSelection, computerSelection);
+    }
+
+    finallWinner(humanScore, computerScore)
 }
 
 playGame()
