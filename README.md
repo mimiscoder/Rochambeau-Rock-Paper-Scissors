@@ -2,7 +2,7 @@
 
 ## Personal Feeling
 
-YEAHHHHH! I did finish the project successfully. It was just a simple Rochambeau game. YES! Originally it was one of the names for this game (you can learn more about it here), which we call Rock, Paper, and Scissors for some reason. This was one of the project assignments in the Foundation course of TOP (The Odin Project). Overall, I think it was pretty much easy to do, and there wasn't anything specific that made me lose my mind (not yet, lol). Because I already have some programming experience in different programming languages like Python, and I even have some prior experience with JavaScript as well. 
+YEAHHHHH! I did finish the project successfully. It was just a simple Rochambeau game. YES! Originally it was one of the names for this game (you can learn more about it [here](https://en.wikipedia.org/wiki/Rock_paper_scissors)), which we call Rock, Paper, and Scissors for some reason. This was one of the project assignments in the Foundation course of TOP (The Odin Project). Overall, I think it was pretty much easy to do, and there wasn't anything specific that made me lose my mind (not yet, lol). Because I already have some programming experience in different programming languages like Python, and I even have some prior experience with JavaScript as well. 
 
 ## Project Description
 
