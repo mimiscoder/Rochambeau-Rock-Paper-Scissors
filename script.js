@@ -18,9 +18,9 @@ function getComputerChoice() {
 }
 
 // Take the user choice and returns it
-function getHumanChoice() {
+function getHumanChoice(roundNumber) {
     // Get the user choice
-    let userChoice = prompt("Please type rock, paper, or scissors:");
+    let userChoice = prompt(`Round ${roundNumber}: Please type rock, paper, or scissors:`);
     return userChoice;
 }
 
@@ -75,7 +75,7 @@ function finallWinner(finallHumanScores, finallComputerScores) {
 // Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
 function playGame() {
     for(let i = 0; i < 5; i++) {
-        let humanSelection = getHumanChoice();
+        let humanSelection = getHumanChoice(i + 1);
         humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase()
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
