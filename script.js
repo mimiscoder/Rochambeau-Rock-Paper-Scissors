@@ -50,7 +50,7 @@ function playRound(humanChoice, computerChoice) {
         humanScore += 1;
         console.log(`It's a tie this round! ${computerChoice} ties with ${humanChoice}`);
     }else {
-        console.log("UNKOWN OPERATION!")
+        console.log("UNKOWN OPERATION!");
     }
 }
 
@@ -62,13 +62,13 @@ function finallWinner(finallHumanScores, finallComputerScores) {
             `Yes! You're the winner. \n
             Your Final Scores: ${finallHumanScores}\n
             Computer Final Scores: ${finallComputerScores}`
-        )
+        );
     }else{
         console.log(
             `"Unfortunately! You lost!". \n
             Your Final Scores: ${finallHumanScores}\n
             Computer Final Scores: ${finallComputerScores}`
-        )
+        );
     }
 }
 
@@ -76,13 +76,13 @@ function finallWinner(finallHumanScores, finallComputerScores) {
 function playGame() {
     for(let i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice(i + 1);
-        humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase()
+        humanSelection = humanSelection.charAt(0).toUpperCase() + humanSelection.slice(1).toLowerCase();
         const computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
 
-    finallWinner(humanScore, computerScore)
+    finallWinner(humanScore, computerScore);
 }
 
-playGame()
+playGame();
 
