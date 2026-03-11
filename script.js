@@ -1,6 +1,8 @@
 let humanScore, computerScore;
 humanScore = computerScore = 0;
 
+const divElement = document.querySelector("div");
+
 function getComputerChoice() {
     // Get the random number(0-2)
     let randomNumber = Math.floor(Math.random() * 3);
