@@ -1,7 +1,7 @@
 let humanScore, computerScore;
 humanScore = computerScore = 0;
 
-const divElement = document.querySelector("div");
+const divElement = document.querySelector(".result");
 
 function getComputerChoice() {
     // Get the random number(0-2)
