@@ -1,13 +1,10 @@
-// Variables to store user and computer scores
 let humanScore, computerScore;
 humanScore = computerScore = 0;
 
-// Randomly returns “rock”, “paper” or “scissors”.
 function getComputerChoice() {
-    // Get the random number(0-2) and store it in a variable
+    // Get the random number(0-2)
     let randomNumber = Math.floor(Math.random() * 3);
 
-    // According to the random number(0-2) return either Rock, paper or scissor.
     if(randomNumber === 0) {
         return "Rock";
     }else if(randomNumber === 1) {
@@ -17,16 +14,13 @@ function getComputerChoice() {
     }
 }
 
-// Take the user choice and returns it
 function getHumanChoice(roundNumber) {
-    // Get the user choice
     let userChoice = prompt(`Round ${roundNumber}: Please type rock, paper, or scissors:`);
     return userChoice;
 }
 
 // Select the winner or loser and assign the score accordingly in a single round.
 function playRound(humanChoice, computerChoice) {
-    // Select the winner and assign score to human or computer
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
         humanScore += 1;
         console.log(`You win this round! ${humanChoice} beats ${computerChoice}`);
@@ -54,9 +48,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-// Determine the finall winner
 function finallWinner(finallHumanScores, finallComputerScores) {
-    // Print the finall winner and scores based on the finall scores of both computer and user
     if(finallHumanScores > finallComputerScores) {
         console.log(
             `Yes! You're the winner. \n
@@ -72,7 +64,7 @@ function finallWinner(finallHumanScores, finallComputerScores) {
     }
 }
 
-// Call playRound to play 5 rounds, keeps track of the scores and declares a winner at the end.
+// Call playRound to play 5 rounds
 function playGame() {
     for(let i = 0; i < 5; i++) {
         let humanSelection = getHumanChoice(i + 1);
