@@ -29,7 +29,7 @@ function playRound(humanChoice, computerChoice) {
         humanChoice === "Scissors" && computerChoice === "Paper"
     ) {
         humanScore += 1;
-        `You win this round! ${humanChoice} beats ${computerChoice}`
+        divElement.textContent = `You win this round! ${humanChoice} beats ${computerChoice}`;
     }else if(
         humanChoice === "Rock" && computerChoice === "Paper"|
         humanChoice === "Paper" && computerChoice === "Scissors"|
@@ -37,13 +37,13 @@ function playRound(humanChoice, computerChoice) {
 
     ) {
         computerScore += 1;
-        `You lose this round! ${computerChoice} beat ${humanChoice}`
+        divElement.textContent = `You lose this round! ${computerChoice} beat ${humanChoice}`;
     }else if(humanChoice === computerChoice) {
         computerScore += 1;
         humanScore += 1;
-        `It's a tie this round! ${computerChoice} ties with ${humanChoice}`
+        divElement.textContent = `It's a tie this round! ${computerChoice} ties with ${humanChoice}`;
     }else {
-        "UNKOWN OPERATION!"
+        divElement.textContent = "UNKOWN OPERATION!";
     }
 }
 
