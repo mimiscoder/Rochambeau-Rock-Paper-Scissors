@@ -25,28 +25,28 @@ function getHumanChoice(roundNumber) {
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === "Rock" && computerChoice === "Scissors") {
         humanScore += 1;
-        console.log(`You win this round! ${humanChoice} beats ${computerChoice}`);
+        `You win this round! ${humanChoice} beats ${computerChoice}`
     }else if(humanChoice === "Paper" && computerChoice === "Rock") {
         humanScore += 1;
-        console.log(`You win this round! ${humanChoice} beat ${computerChoice}`);
+        `You win this round! ${humanChoice} beat ${computerChoice}`
     }else if(humanChoice === "Scissors" && computerChoice === "Paper") {
         humanScore += 1;
-        console.log(`You win this round! ${humanChoice} beat ${computerChoice}`);
+        `You win this round! ${humanChoice} beat ${computerChoice}`
     }else if(humanChoice === "Rock" && computerChoice === "Paper") {
         computerScore += 1;
-        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
+        `You lose this round! ${computerChoice} beat ${humanChoice}`
     }else if(humanChoice === "Paper" && computerChoice === "Scissors") {
         computerScore += 1;
-        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
+        `You lose this round! ${computerChoice} beat ${humanChoice}`
     }else if(humanChoice === "Scissors" && computerChoice === "Rock") {
         computerScore += 1;
-        console.log(`You lose this round! ${computerChoice} beat ${humanChoice}`);
+        `You lose this round! ${computerChoice} beat ${humanChoice}`
     }else if(humanChoice === computerChoice) {
         computerScore += 1;
         humanScore += 1;
-        console.log(`It's a tie this round! ${computerChoice} ties with ${humanChoice}`);
+        `It's a tie this round! ${computerChoice} ties with ${humanChoice}`
     }else {
-        console.log("UNKOWN OPERATION!");
+        "UNKOWN OPERATION!"
     }
 }
 
