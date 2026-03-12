@@ -93,6 +93,10 @@ buttons.forEach((btn) => btn.addEventListener("click", () => {
             if(playAgain === false){
                 window.close();
             }
+
+            divElement.textContent = 0;
+            userSpan.textContent = 0;
+            computerSpan.textContent = 0;
         }, 0);
     }
 
