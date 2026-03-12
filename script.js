@@ -51,22 +51,6 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function finallWinner(finallHumanScores, finallComputerScores) {
-    if(finallHumanScores > finallComputerScores) {
-        console.log(
-            `Yes! You're the winner. \n
-            Your Final Scores: ${finallHumanScores}\n
-            Computer Final Scores: ${finallComputerScores}`
-        );
-    }else{
-        console.log(
-            `"Unfortunately! You lost!". \n
-            Your Final Scores: ${finallHumanScores}\n
-            Computer Final Scores: ${finallComputerScores}`
-        );
-    }
-}
-
 const buttons = document.querySelectorAll("button");
 buttons.forEach((btn) => btn.addEventListener("click", () => {
     playRound(btn.innerText, getComputerChoice());
