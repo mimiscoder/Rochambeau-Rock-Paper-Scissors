@@ -83,11 +83,11 @@ buttons.forEach((btn) => btn.addEventListener("click", () => {
        }else{
             gameResult = "It's a Tie! You and the computer tied.";
        }
+        
+        divElement.textContent = gameResult;
+        humanScore = computerScore = 0;
     }
 
-    divElement.textContent = gameResult;
+    
 
-    humanScore = computerScore = 0;
-
-    alert(gameResult);
 }))
