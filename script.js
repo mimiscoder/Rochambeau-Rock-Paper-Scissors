@@ -90,6 +90,9 @@ buttons.forEach((btn) => btn.addEventListener("click", () => {
         setTimeout(() => {
             alert(gameResult);  
             let playAgain = confirm("Do you want to play again? ");
+            if(playAgain === false){
+                window.close();
+            }
         }, 0);
     }
 
