@@ -72,4 +72,6 @@ buttons.forEach((btn) => btn.addEventListener("click", () => {
     playRound(btn.innerText, getComputerChoice());
     userSpan.textContent = humanScore;
     computerSpan.textContent = computerScore;
+
+    let gameResult;
 }))
